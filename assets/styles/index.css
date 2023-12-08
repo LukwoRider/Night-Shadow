@@ -1,0 +1,16 @@
+.accueil{
+    display: flex;
+flex-direction: column;
+}
+
+#atmosphere{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#co2{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backstage Nuit de l'info</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .gallery-container {
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .gallery {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img {
+            width: 33.33%;
+            height: auto;
+            scroll-snap-align: start;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 2em;
+            cursor: pointer;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="assets/images/backstage_1.jpg" alt="Image 1">
+            <img src="assets/images/backstage_3.jpg" alt="Image 2">
+            <img src="assets/images/backstage_4.jpg" alt="Image 3">
+        </div>
+        <button class="arrow arrow-left" onclick="prevSlide()">←</button>
+        <button class="arrow arrow-right" onclick="nextSlide()">→</button>
+    </div>
+
+    <script>
+        let gallery = document.querySelector('.gallery');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % 3;
+            updateGallery();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + 3) % 3;
+            updateGallery();
+        }
+
+        function updateGallery() {
+            gallery.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>

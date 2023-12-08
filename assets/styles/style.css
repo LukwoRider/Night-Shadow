@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color);
+    background: var(--bg);
+    font-family: Verdana, Trebuchet MS, sans-serif;
+    display: grid;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#jeb {
+    width: 10px;
+    height: 10px;
+    color: var(--bg);
+}
+
+a:link    {text-decoration: none; font-weight: bold; color: var(--color-link); }
+a:visited {text-decoration: none; font-weight: bold; color: var(--color-link); }
+a:active  {text-decoration: none; color: var(--color-link-active); }
+a:hover   {text-decoration: none; color:var(--color-link-hover); background: var(--color-link-hover-bg); cursor: pointer; }
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 10
+;
+}
+
+#titre {
+    color: white;
+    text-align: start;
+    background-color: var(--bg-header);
+    padding-left: 5vw;
+}
+
+/* ////// */
+/* header */
+/* ////// */
+header {
+    background-color: var(--bg-header);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vh;
+    padding: 0 80px;
+    height: min-content;
+}
+
+header h1 {
+    color: white;
+}
+
+/* hearImage */
+header .hearImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header .hearImage h1{
+    font-size: large;
+}
+header .hearImage img {
+    height: 110px;
+}
+
+/* nav */
+header nav{
+    width: 100%;
+}
+header ul{
+    width: 100%;
+    font-size: large;
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+}
+
+/* ////// */
+/* header */
+/* ////// */
+body section{
+    padding: 4vh 5vw 0 5vw;
+}

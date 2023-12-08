@@ -1,0 +1,36 @@
+.container p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container section{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5vw;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.container section>article{
+    flex-basis: 20vw;
+}
+
+.container section>article>article{
+    border: 2px solid var(--bg-header);
+    padding: 20px;
+}
+.container section>article>article p{
+    text-align: start;
+}
+.container section>article>article img{
+    width: 100%;
+}
+
+.container section>article>article:hover {
+    background: var(--bg-header);
+    color: var(--bg);
+    font-weight: 600;
+}
+.container section>article>article p{
+    text-align: start;
+}

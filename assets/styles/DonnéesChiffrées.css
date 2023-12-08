@@ -1,0 +1,16 @@
+.container section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+.container section article button {
+    background-color: transparent;
+    border: none;
+}
+
+p {
+    font-size: 30px;
+}
+
+

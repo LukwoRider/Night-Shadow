@@ -1,0 +1,27 @@
+.container section {
+    display: flex;
+}
+.container button {
+    background-color: transparent;
+    border: none;
+}
+
+img{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    font-size: 20px;
+}
+
+button {
+    position: fixed;
+    bottom: 5vh;
+    left: 5vw;
+}
+.container section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

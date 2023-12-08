@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <title>Shoot'em Up Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #424242;
+        }
+
+        canvas {
+            background-image: url("assets/images/bg.jpg");
+            border: 8px solid grey; 
+            margin: 50px; 
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #score {
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            width: 10%;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin: 50px;
+            background-color: #21252b;
+            border: white solid;
+            border-radius: 10px;
+        }
+
+        .score_p {
+            padding-left: 15px;
+            color : white;
+        }
+
+        #replayButton {
+            display: none;
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer;
+            background-color: #4CAF50; 
+            color: #fff; 
+            border: none; 
+            border-radius: 5px; 
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #returnButton {
+            display: none;
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer;
+            background-color: red; 
+            color: #fff; 
+            border: none; 
+            border-radius: 5px; 
+            margin: 10px;
+        }
+
+        #replayButton:hover {
+            background-color: #45a049;
+        }
+        #returnButton:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <audio id="ost-ryu">
+            <source src="/assets/mp3/Street Fighter II Ryu Theme Original.mp3" type="audio/mp3">
+        </audio>
+        <canvas id="gameCanvas" width="800" height="600">
+            <img id="playerImage" src="assets/images/ryu_without_hadouken.png" alt="Player">
+            <img id="playerShootingImage" src="assets/images/ryu_with_hadouken.png" alt="Player Shooting">
+            <img id="Ennemy_01" src="assets/images/CO2.png" alt="CO2 Ennemy">
+            <img id="Ennemy_02" src="assets/images/CH4.png" alt="CH4 Ennemy">
+            <img id="Hadouken" src="assets/images/hadouken.png" alt="Hadouken">
+            
+        </canvas>
+        <div id="score">
+            <p class="score_p" id="scoreDisplay">Score: 0</p>
+            <p class="score_p" id="lifeDisplay">Vie: 5</p>
+            <button id="replayButton">Rejouer</button>
+            <button id="returnButton">Retour</button>
+        </div>
+    </div>
+    <script src="assets/js/shoot_em_up_game.js"></script>
+</body>
+</html>
